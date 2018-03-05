@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, MonsterActivity.class);
 
                 intent.putExtra(MainActivity.monsterName, "Arch Knight");
-
                 startActivity(intent);
             }
         });
