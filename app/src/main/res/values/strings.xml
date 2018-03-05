@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Monster Legends</string>
+    <string name="monsterName">Nom du monstre</string>
+    <string name="level0">Level 0</string>
+    <string name="textLife">123</string>
+    <string name="textSpeed">123</string>
+    <string name="textStamina">123</string>
+    <string name="textForce">123</string>
+</resources>

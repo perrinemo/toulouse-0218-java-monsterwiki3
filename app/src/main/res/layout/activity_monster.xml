@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    tools:context="fr.wildcodeschool.monsterlegends.MonsterActivity">
+
+    <TextView
+        android:id="@+id/monsterName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/monsterName"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/level0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/level0"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monsterName" />
+
+    <ImageView
+        android:id="@+id/egg"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/level0" />
+
+    <ImageView
+        android:id="@+id/imgLife"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/egg"
+        app:srcCompat="@drawable/life" />
+
+    <ImageView
+        android:id="@+id/imgForce"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLife"
+        app:srcCompat="@drawable/power" />
+
+    <TextView
+        android:id="@+id/textLife"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/textLife"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/imgLife"
+        app:layout_constraintTop_toBottomOf="@+id/egg" />
+
+    <TextView
+        android:id="@+id/textForce"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/textForce"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/imgForce"
+        app:layout_constraintTop_toBottomOf="@+id/textLife" />
+
+    <TextView
+        android:id="@+id/textSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginRight="90dp"
+        android:layout_marginTop="98dp"
+        android:text="@string/textSpeed"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/egg" />
+
+    <TextView
+        android:id="@+id/textStamina"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginRight="90dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/textStamina"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/egg" />
+
+    <ImageView
+        android:id="@+id/imgSpeed"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="128dp"
+        android:layout_marginTop="98dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/egg"
+        app:srcCompat="@drawable/speed" />
+
+    <ImageView
+        android:id="@+id/imgStamina"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toStartOf="@+id/textStamina"
+        app:layout_constraintTop_toBottomOf="@+id/egg"
+        app:srcCompat="@drawable/stamina" />
+
+    <ImageView
+        android:id="@+id/elementCenter"
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/egg" />
+
+    <ImageView
+        android:id="@+id/elementLeft"
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/elementCenter"
+        app:layout_constraintTop_toBottomOf="@+id/egg" />
+
+    <ImageView
+        android:id="@+id/elementRight"
+        android:layout_width="25dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/elementCenter"
+        app:layout_constraintTop_toBottomOf="@+id/egg" />
+
+</android.support.constraint.ConstraintLayout>
