@@ -16,4 +16,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
     }
+
+    private Monster[] monsters = {
+            new Monster("Arch Knight", R.drawable.archknight0, 200, 56, 200, 110, R.drawable.dark, R.drawable.magic),
+
+    };
 }

@@ -11,16 +11,30 @@ public class Monster {
     private int power;
     private int stamina;
     private int speed;
+    private int element1;
+    private int element2;
 
     /** Constructeur d'un monstre */
 
-    public Monster(String name, int image, int life, int power, int stamine, int speed) {
+    public Monster(String name, int image, int life, int power, int stamine, int speed, int element1) {
         this.name = name;
         this.image = image;
         this.life = life;
         this.power = power;
         this.stamina = stamine;
         this.speed = speed;
+        this.element1 = element1;
+    }
+
+    public Monster(String name, int image, int life, int power, int stamine, int speed, int element1, int element2) {
+        this.name = name;
+        this.image = image;
+        this.life = life;
+        this.power = power;
+        this.stamina = stamine;
+        this.speed = speed;
+        this.element1 = element1;
+        this.element2 = element2;
     }
 
     /** Setters */
@@ -49,6 +63,14 @@ public class Monster {
         this.speed = speed;
     }
 
+    public void setElement1(int element1) {
+        this.element1 = element1;
+    }
+
+    public void setElement2(int element2) {
+        this.element2 = element2;
+    }
+
     /** Méthodes permettant de définir les attributs d'un monstre */
 
     public String getName() {
@@ -73,5 +95,13 @@ public class Monster {
 
     public int getSpeed() {
         return speed;
+    }
+
+    public int getElement1() {
+        return element1;
+    }
+
+    public int getElement2() {
+        return element2;
     }
 }
