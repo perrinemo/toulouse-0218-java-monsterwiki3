@@ -1,4 +1,4 @@
 package fr.wildcodeschool.monsterlegends;
 
-public class PageMonsterActivity2 {
+public class MonsterLevel4 {
 }

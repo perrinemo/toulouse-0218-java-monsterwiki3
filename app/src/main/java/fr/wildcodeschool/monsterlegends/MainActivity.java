@@ -15,16 +15,5 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button mbtn = findViewById(R.id.button);
-
-        mbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MonsterActivity.class);
-
-                intent.putExtra(MainActivity.monsterName, "Arch Knight");
-                startActivity(intent);
-            }
-        });
     }
 }
