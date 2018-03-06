@@ -1,24 +1,38 @@
 package fr.wildcodeschool.monsterlegends;
 
 import android.content.Intent;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
-public class MonsterActivity extends AppCompatActivity {
+import java.util.List;
+import java.util.Vector;
+
+public class MonsterActivity extends FragmentActivity {
+
+    private PagerAdapter scrollAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_monster);
 
-        TextView mMonsterName = findViewById(R.id.monsterName);
+        List fragments = new Vector();
 
-        Intent intent = getIntent();
-        String monsterName = intent.getStringExtra(MainActivity.monsterName);
+        fragments.add(Fragment.instantiate(this, MonsterLevel0.class.getName()));
+        fragments.add(Fragment.instantiate(this, MonsterLevel1.class.getName()));
+        fragments.add(Fragment.instantiate(this, MonsterLevel4.class.getName()));
+        fragments.add(Fragment.instantiate(this, MonsterLevel25.class.getName()));
 
-        mMonsterName.setText(monsterName);
+        this.scrollAdapter = new ScrollAdapter(super.getSupportFragmentManager(), fragments);
+
+        ViewPager pager = super.findViewById(R.id.viewpager);
+        pager.setAdapter(this.scrollAdapter);
     }
 }
