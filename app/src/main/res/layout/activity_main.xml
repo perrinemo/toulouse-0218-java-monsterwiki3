@@ -20,13 +20,14 @@
             android:id="@+id/gridview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
+            android:layout_below="@id/toolbar"
+            android:background="#ffffff"
             android:columnWidth="100dp"
-            android:numColumns="auto_fit"
-            android:verticalSpacing="24dp"
+            android:gravity="center"
             android:horizontalSpacing="10dp"
+            android:numColumns="auto_fit"
             android:stretchMode="columnWidth"
-            android:layout_below="@id/toolbar"/>
+            android:verticalSpacing="24dp" />
 
     </LinearLayout>
 </RelativeLayout>
