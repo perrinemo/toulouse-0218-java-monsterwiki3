@@ -22,7 +22,8 @@ public class GridAdapter extends BaseAdapter {
         this.monsters = monsters;
     }
 
-    //Methode obligatoire qui sont dans la classe BaseAdapter
+    /** Methode obligatoire qui sont dans la classe BaseAdapter */
+
     @Override
     public int getCount(){
         return monsters.length;
@@ -38,7 +39,8 @@ public class GridAdapter extends BaseAdapter {
         return null;
     }
 
-    //Partie sur laquelle on agit
+    /** Partie sur laquelle on agit */
+
     @Override
     public View getView (int position, View convertView, ViewGroup parent) {
         final Monster monster = monsters[position];
@@ -48,14 +50,16 @@ public class GridAdapter extends BaseAdapter {
             convertView = layoutInflater.inflate(R.layout.grid_layout, null);
         }
 
-        // different elements dans le miniature.
+        /** differents éléments dans le miniature */
+
         final ImageView monsterImg = convertView.findViewById(R.id.imgLv1);
         final TextView monsterName = convertView.findViewById(R.id.monster_name);
         final ImageView elementLeft = convertView.findViewById(R.id.element_Left);
         final ImageView elementCenter= convertView.findViewById(R.id.element_Center);
         final ImageView elementRight = convertView.findViewById(R.id.element_Right);
 
-        //Appel du contructeur pour realiser le miniature.
+        /** Appel du contructeur pour réaliser le miniature. */
+
         monsterName.setText(monster.getName());
         monsterImg.setImageResource(monster.getImage1());
         elementCenter.setImageResource(monster.getElement2());
