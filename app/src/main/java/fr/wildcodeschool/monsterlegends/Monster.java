@@ -14,7 +14,7 @@ public class Monster {
     private int life0;
     private int life1;
     private int life4;
-    private int life15;
+    private int life25;
 
     private int power0;
     private int power1;
@@ -36,7 +36,7 @@ public class Monster {
                    int power0, int life0, int speed0, int stamina,
                    int power1, int life1, int speed1,
                    int power4, int life4, int speed4,
-                   int power25, int life15, int speed25,
+                   int power25, int life25, int speed25,
                    int element1, int element3) {
         this.name = name;
         this.image0 = image0;
@@ -46,7 +46,7 @@ public class Monster {
         this.life0 = life0;
         this.life1 = life1;
         this.life4 = life4;
-        this.life15 = life15;
+        this.life25 = life25;
         this.power0 = power0;
         this.power1 = power1;
         this.power4 = power4;
@@ -64,7 +64,7 @@ public class Monster {
                    int power0, int life0, int speed0, int stamina,
                    int power1, int life1, int speed1,
                    int power4, int life4, int speed4,
-                   int power25, int life15, int speed25,
+                   int power25, int life25, int speed25,
                    int element2) {
         this.name = name;
         this.image0 = image0;
@@ -74,7 +74,7 @@ public class Monster {
         this.life0 = life0;
         this.life1 = life1;
         this.life4 = life4;
-        this.life15 = life15;
+        this.life25 = life25;
         this.power0 = power0;
         this.power1 = power1;
         this.power4 = power4;
@@ -137,8 +137,8 @@ public class Monster {
         return life4;
     }
 
-    public int getLife15() {
-        return life15;
+    public int getLife25() {
+        return life25;
     }
 
     public int getPower0() {

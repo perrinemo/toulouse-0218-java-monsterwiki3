@@ -66,7 +66,8 @@ public class GridAdapter extends BaseAdapter {
         elementLeft.setImageResource(monster.getElement1());
         elementRight.setImageResource(monster.getElement3());
 
-        //On stock les données get dans une variable.
+        /** On stock les données get dans une variable. */
+
         final String monster_name = monster.getName();
 
         final int monsterImage = monster.getImage0();
@@ -81,12 +82,26 @@ public class GridAdapter extends BaseAdapter {
 
         /** On convertit les int en string */
 
-        final String life = String.valueOf(monster.getLife());
-        final String power = String.valueOf(monster.getPower());
-        final String speed = String.valueOf(monster.getSpeed());
+        final String life0 = String.valueOf(monster.getLife0());
+        final String power0 = String.valueOf(monster.getPower0());
+        final String speed0 = String.valueOf(monster.getSpeed0());
+
+        final String life1 = String.valueOf(monster.getLife1());
+        final String power1 = String.valueOf(monster.getPower1());
+        final String speed1 = String.valueOf(monster.getSpeed1());
+
+        final String life4 = String.valueOf(monster.getLife4());
+        final String power4 = String.valueOf(monster.getPower4());
+        final String speed4 = String.valueOf(monster.getSpeed4());
+
+        final String life25 = String.valueOf(monster.getLife25());
+        final String power25 = String.valueOf(monster.getPower25());
+        final String speed25 = String.valueOf(monster.getSpeed25());
+
         final String stamina = String.valueOf(monster.getStamina());
 
-        //on cre le Bundle qui sert à stocker une image, car image ne se put-extra pas.
+        /** on créait le Bundle qui sert à stocker une image, car image ne se put-extra pas. */
+
         final Bundle bundleImg0 = new Bundle();
 
         final Bundle bundleImg1 = new Bundle();
@@ -96,7 +111,8 @@ public class GridAdapter extends BaseAdapter {
         final Bundle bundle3 = new Bundle();
         final Bundle bundle4 = new Bundle();
 
-        //le set on click quand on clic sur l'image.
+        /** le set on click quand on clic sur l'image. */
+
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -119,9 +135,22 @@ public class GridAdapter extends BaseAdapter {
                 intent.putExtras(bundle4);
 
                 intent.putExtra("monsterName", monster_name);
-                intent.putExtra("monsterLife", life);
-                intent.putExtra("monsterPower", power);
-                intent.putExtra("monsterSpeed", speed);
+                intent.putExtra("monsterLife0", life0);
+                intent.putExtra("monsterPower0", power0);
+                intent.putExtra("monsterSpeed0", speed0);
+
+                intent.putExtra("monsterLife1", life1);
+                intent.putExtra("monsterPower1", power1);
+                intent.putExtra("monsterSpeed1", speed1);
+
+                intent.putExtra("monsterLife4", life4);
+                intent.putExtra("monsterPower4", power4);
+                intent.putExtra("monsterSpeed4", speed4);
+
+                intent.putExtra("monsterLife25", life25);
+                intent.putExtra("monsterPower25", power25);
+                intent.putExtra("monsterSpeed25", speed25);
+
                 intent.putExtra("monsterStamina", stamina);
 
 

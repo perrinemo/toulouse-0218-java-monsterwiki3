@@ -47,9 +47,9 @@ public class MonsterLevel1 extends Fragment {
         int monsterElt3 = bundle4.getInt("elt3");
 
         String monsterName = getActivity().getIntent().getStringExtra("monsterName");
-        String monsterLife = getActivity().getIntent().getStringExtra("monsterLife");
-        String monsterSpeed = getActivity().getIntent().getStringExtra("monsterSpeed");
-        String monsterPower = getActivity().getIntent().getStringExtra("monsterPower");
+        String monsterLife = getActivity().getIntent().getStringExtra("monsterLife1");
+        String monsterSpeed = getActivity().getIntent().getStringExtra("monsterSpeed1");
+        String monsterPower = getActivity().getIntent().getStringExtra("monsterPower1");
         String monsterStamina = getActivity().getIntent().getStringExtra("monsterStamina");
 
         /** On envoie les images et les textes récupérés dans nos id du xml */
