@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private Monster[] monsters = {
-            new Monster("Arch Knight", R.drawable.archknight0, 200, 56, 200, 140, R.drawable.dark, R.drawable.magic),
-            new Monster("Bonbon", R.drawable.bonbon0, 175, 63, 200, 120, R.drawable.thunder, R.drawable.earth),
+            new Monster("Arch Knight", R.drawable.archknight0, R.drawable.archknight1, R.drawable.archknight2, R.drawable.archknight3, 200, 56, 200, 140, R.drawable.dark, R.drawable.magic),
+           /* new Monster("Bonbon", R.drawable.bonbon0, 175, 63, 200, 120, R.drawable.thunder, R.drawable.earth),
             new Monster("Fire Lion", R.drawable.firelion0, 220, 50, 175, 100, R.drawable.fire),
             new Monster("Genie", R.drawable.genie0, 190, 50, 250, 100, R.drawable.magic),
             new Monster("Giragast", R.drawable.giragast0, 223, 63, 160, 110, R.drawable.dark, R.drawable.magic),
@@ -35,6 +35,6 @@ public class MainActivity extends AppCompatActivity {
             new Monster("Rockilla", R.drawable.rockilla0, 175, 71, 175, 100, R.drawable.earth),
             new Monster("Thunder Eagle", R.drawable.thundereagle0, 175, 50, 250, 100, R.drawable.thunder),
             new Monster("Turtle", R.drawable.turtle0, 200, 56, 200, 100, R.drawable.water),
-            new Monster("Tyrannoking", R.drawable.tyrannoking0, 230, 50, 175, 100, R.drawable.dark),
+            new Monster("Tyrannoking", R.drawable.tyrannoking0, 230, 50, 175, 100, R.drawable.dark),*/
     };
 }
