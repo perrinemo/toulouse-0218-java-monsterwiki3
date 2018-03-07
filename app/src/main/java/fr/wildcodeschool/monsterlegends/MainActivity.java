@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             new Monster("Electrex", R.drawable.electrex0,R.drawable.electrex1,R.drawable.electrex2,R.drawable.electrex3,170,63,225,110,205,112,272,261,143,347,654,1404,868,R.drawable.earth,R.drawable.thunder),
             new Monster("Fire Lion", R.drawable.firelion0, R.drawable.firelion1, R.drawable.firelion2, R.drawable.firelion3, 220, 50, 175, 100, 242, 81, 192,308, 104, 244, 770, 1017,612,  R.drawable.fire),
             new Monster("Genie", R.drawable.genie0, R.drawable.genie1, R.drawable.genie2, R.drawable.genie3, 190, 50, 250, 100,209, 81, 275, 266, 104, 350, 665, 1017, 875, R.drawable.magic),
-            new Monster("Giragast", R.drawable.giragast0, R.drawable.giragast1, R.drawable.giragast2, R.drawable.giragast3, 223, 63, 160, 110, 269, 112, 193, 343, 143, 857, 1404, 616,R.drawable.dark, R.drawable.magic),
+            new Monster("Giragast", R.drawable.giragast0, R.drawable.giragast1, R.drawable.giragast2, R.drawable.giragast3, 223, 63, 160, 110, 269, 112, 193, 343, 143, 246, 857, 1404, 616,R.drawable.dark, R.drawable.magic),
             new Monster("Gravoid", R.drawable.gravoid0, R.drawable.gravoid1, R.drawable.gravoid2, R.drawable.gravoid3, 220, 53, 185, 120,290,104,244,369,133,310,924,1302,777, R.drawable.earth, R.drawable.metal),
             new Monster("Light Sphinx", R.drawable.lightsphinx0,R.drawable.lightsphinx1, R.drawable.lightsphinx2,R.drawable.lightsphinx3, 175, 77, 160, 110, 212, 138,193, 270, 176, 246, 675, 1729, 616, R.drawable.earth, R.drawable.light),
             new Monster("Panda", R.drawable.panda0,R.drawable.panda1,R.drawable.panda2,R.drawable.panda3, 190, 56, 200, 100,209,91,220,266,116,280,665,1139,700, R.drawable.nature),
