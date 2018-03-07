@@ -52,19 +52,19 @@ public class GridAdapter extends BaseAdapter {
 
         /** differents éléments dans le miniature */
 
-        final ImageView monsterImg = convertView.findViewById(R.id.imgLv1);
-        final TextView monsterName = convertView.findViewById(R.id.monster_name);
-        final ImageView elementLeft = convertView.findViewById(R.id.element_Left);
-        final ImageView elementCenter= convertView.findViewById(R.id.element_Center);
-        final ImageView elementRight = convertView.findViewById(R.id.element_Right);
+        final ImageView gridMonsterImg = convertView.findViewById(R.id.imgLv1);
+        final TextView gridMonsterName = convertView.findViewById(R.id.monster_name);
+        final ImageView gridElementLeft = convertView.findViewById(R.id.element_Left);
+        final ImageView gridElementCenter= convertView.findViewById(R.id.element_Center);
+        final ImageView gridElementRight = convertView.findViewById(R.id.element_Right);
 
         /** Appel du contructeur pour réaliser le miniature. */
 
-        monsterName.setText(monster.getName());
-        monsterImg.setImageResource(monster.getImage1());
-        elementCenter.setImageResource(monster.getElement2());
-        elementLeft.setImageResource(monster.getElement1());
-        elementRight.setImageResource(monster.getElement3());
+        gridMonsterName.setText(monster.getName());
+        gridMonsterImg.setImageResource(monster.getImage1());
+        gridElementCenter.setImageResource(monster.getElement2());
+        gridElementLeft.setImageResource(monster.getElement1());
+        gridElementRight.setImageResource(monster.getElement3());
 
         /** On stock les données get dans une variable. */
 

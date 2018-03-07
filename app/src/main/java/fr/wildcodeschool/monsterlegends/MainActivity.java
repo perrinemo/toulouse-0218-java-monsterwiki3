@@ -9,8 +9,6 @@ import android.widget.GridView;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String monsterName = "monsterName";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
