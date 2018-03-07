@@ -15,7 +15,7 @@ public class GridAdapter extends BaseAdapter {
     private final Context mContext;
     private final Monster[] monsters;
 
-    //Constructeur de la class GridAdapter
+    /** Constructeur de la class GridAdapter */
 
     public GridAdapter (Context context, Monster[] monsters) {
         this.mContext = context;

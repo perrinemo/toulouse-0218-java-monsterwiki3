@@ -21,10 +21,7 @@ public class Monster {
     private int power4;
     private int power25;
 
-    private int stamina0;
-    private int stamina1;
-    private int stamina4;
-    private int stamina25;
+    private int stamina;
 
     private int speed0;
     private int speed1;
@@ -36,10 +33,10 @@ public class Monster {
     private int element3;
 
     public Monster(String name, int image0, int image1, int image4, int image25,
-                   int life0, int life1, int life4, int life15,
                    int power0, int power1, int power4, int power25,
-                   int stamina0, int stamina1, int stamina4, int stamina25,
+                   int life0, int life1, int life4, int life15,
                    int speed0, int speed1, int speed4, int speed25,
+                   int stamina,
                    int element1, int element3) {
         this.name = name;
         this.image0 = image0;
@@ -54,10 +51,7 @@ public class Monster {
         this.power1 = power1;
         this.power4 = power4;
         this.power25 = power25;
-        this.stamina0 = stamina0;
-        this.stamina1 = stamina1;
-        this.stamina4 = stamina4;
-        this.stamina25 = stamina25;
+        this.stamina = stamina;
         this.speed0 = speed0;
         this.speed1 = speed1;
         this.speed4 = speed4;
@@ -67,10 +61,10 @@ public class Monster {
     }
 
     public Monster(String name, int image0, int image1, int image4, int image25,
-                   int life0, int life1, int life4, int life15,
                    int power0, int power1, int power4, int power25,
-                   int stamina0, int stamina1, int stamina4, int stamina25,
+                   int life0, int life1, int life4, int life15,
                    int speed0, int speed1, int speed4, int speed25,
+                   int stamina,
                    int element2) {
         this.name = name;
         this.image0 = image0;
@@ -85,10 +79,7 @@ public class Monster {
         this.power1 = power1;
         this.power4 = power4;
         this.power25 = power25;
-        this.stamina0 = stamina0;
-        this.stamina1 = stamina1;
-        this.stamina4 = stamina4;
-        this.stamina25 = stamina25;
+        this.stamina = stamina;
         this.speed0 = speed0;
         this.speed1 = speed1;
         this.speed4 = speed4;
@@ -166,21 +157,10 @@ public class Monster {
         return power25;
     }
 
-    public int getStamina0() {
-        return stamina0;
+    public int getStamina() {
+        return stamina;
     }
 
-    public int getStamina1() {
-        return stamina1;
-    }
-
-    public int getStamina4() {
-        return stamina4;
-    }
-
-    public int getStamina25() {
-        return stamina25;
-    }
 
     public int getSpeed0() {
         return speed0;
