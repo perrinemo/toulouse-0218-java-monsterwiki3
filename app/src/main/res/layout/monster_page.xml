@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/level0"
+        android:id="@+id/level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -35,14 +35,14 @@
         app:layout_constraintTop_toBottomOf="@+id/monsterName" />
 
     <ImageView
-        android:id="@+id/egg"
+        android:id="@+id/monsterAvatar"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/level0" />
+        app:layout_constraintTop_toBottomOf="@+id/level" />
 
     <ImageView
         android:id="@+id/imgLife"
@@ -51,7 +51,7 @@
         android:layout_marginStart="90dp"
         android:layout_marginTop="60dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/egg"
+        app:layout_constraintTop_toBottomOf="@+id/monsterAvatar"
         app:srcCompat="@drawable/life" />
 
     <ImageView
@@ -73,7 +73,7 @@
         android:text="@string/textLife"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/imgLife"
-        app:layout_constraintTop_toBottomOf="@+id/egg" />
+        app:layout_constraintTop_toBottomOf="@+id/monsterAvatar" />
 
     <TextView
         android:id="@+id/textForce"
@@ -95,7 +95,7 @@
         android:text="@string/textSpeed"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/egg" />
+        app:layout_constraintTop_toBottomOf="@+id/monsterAvatar" />
 
     <TextView
         android:id="@+id/textStamina"
@@ -106,7 +106,7 @@
         android:text="@string/textStamina"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/egg" />
+        app:layout_constraintTop_toBottomOf="@+id/monsterAvatar" />
 
     <ImageView
         android:id="@+id/imgSpeed"
@@ -115,7 +115,7 @@
         android:layout_marginRight="128dp"
         android:layout_marginTop="98dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/egg"
+        app:layout_constraintTop_toBottomOf="@+id/monsterAvatar"
         app:srcCompat="@drawable/speed" />
 
     <ImageView
@@ -125,7 +125,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginTop="60dp"
         app:layout_constraintEnd_toStartOf="@+id/textStamina"
-        app:layout_constraintTop_toBottomOf="@+id/egg"
+        app:layout_constraintTop_toBottomOf="@+id/monsterAvatar"
         app:srcCompat="@drawable/stamina" />
 
     <ImageView
@@ -137,7 +137,7 @@
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/egg" />
+        app:layout_constraintTop_toBottomOf="@+id/monsterAvatar" />
 
     <ImageView
         android:id="@+id/elementLeft"
@@ -145,7 +145,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toStartOf="@+id/elementCenter"
-        app:layout_constraintTop_toBottomOf="@+id/egg" />
+        app:layout_constraintTop_toBottomOf="@+id/monsterAvatar" />
 
     <ImageView
         android:id="@+id/elementRight"
@@ -153,6 +153,6 @@
         android:layout_height="30dp"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toEndOf="@+id/elementCenter"
-        app:layout_constraintTop_toBottomOf="@+id/egg" />
+        app:layout_constraintTop_toBottomOf="@+id/monsterAvatar" />
 
 </android.support.constraint.ConstraintLayout>

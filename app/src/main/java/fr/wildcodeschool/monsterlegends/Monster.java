@@ -6,79 +6,64 @@ public class Monster {
      * ses stats (life, power, stamina, speed)
      */
     private String name;
-    private int image;
+    private int image0;
+    private int image1;
+    private int image4;
+    private int image25;
+
     private int life;
     private int power;
     private int stamina;
     private int speed;
     private int element1;
     private int element2;
+    private int element3;
 
-    /** Constructeur d'un monstre */
-
-    public Monster(String name, int image, int life, int power, int stamine, int speed, int element1) {
+    public Monster(String name, int image0, int image1, int image4, int image25, int life, int power, int stamina, int speed, int element1, int element3) {
         this.name = name;
-        this.image = image;
+        this.image0 = image0;
+        this.image1 = image1;
+        this.image4 = image4;
+        this.image25 = image25;
         this.life = life;
         this.power = power;
-        this.stamina = stamine;
-        this.speed = speed;
-        this.element1 = element1;
-    }
-
-    public Monster(String name, int image, int life, int power, int stamine, int speed, int element1, int element2) {
-        this.name = name;
-        this.image = image;
-        this.life = life;
-        this.power = power;
-        this.stamina = stamine;
-        this.speed = speed;
-        this.element1 = element1;
-        this.element2 = element2;
-    }
-
-    /** Setters */
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setImage(int image) {
-        this.image = image;
-    }
-
-    public void setLife(int life) {
-        this.life = life;
-    }
-
-    public void setPower(int power) {
-        this.power = power;
-    }
-
-    public void setStamina(int stamina) {
         this.stamina = stamina;
-    }
-
-    public void setSpeed(int speed) {
         this.speed = speed;
-    }
-
-    public void setElement1(int element1) {
         this.element1 = element1;
+        this.element3 = element3;
     }
 
-    public void setElement2(int element2) {
+    public Monster(String name, int image0, int image1, int image4, int image25, int life, int power, int stamina, int speed, int element2) {
+        this.name = name;
+        this.image0 = image0;
+        this.image1 = image1;
+        this.image4 = image4;
+        this.image25 = image25;
+        this.life = life;
+        this.power = power;
+        this.stamina = stamina;
+        this.speed = speed;
         this.element2 = element2;
     }
-
-    /** Méthodes permettant de définir les attributs d'un monstre */
 
     public String getName() {
         return name;
     }
 
-    public int getImage() {
-        return image;
+    public int getImage0() {
+        return image0;
+    }
+
+    public int getImage1() {
+        return image1;
+    }
+
+    public int getImage4() {
+        return image4;
+    }
+
+    public int getImage25() {
+        return image25;
     }
 
     public int getLife() {
@@ -103,5 +88,9 @@ public class Monster {
 
     public int getElement2() {
         return element2;
+    }
+
+    public int getElement3() {
+        return element3;
     }
 }
