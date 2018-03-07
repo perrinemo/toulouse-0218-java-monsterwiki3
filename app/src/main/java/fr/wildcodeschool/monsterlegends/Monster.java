@@ -33,10 +33,10 @@ public class Monster {
     private int element3;
 
     public Monster(String name, int image0, int image1, int image4, int image25,
-                   int power0, int power1, int power4, int power25,
-                   int life0, int life1, int life4, int life15,
-                   int speed0, int speed1, int speed4, int speed25,
-                   int stamina,
+                   int power0, int life0, int speed0, int stamina,
+                   int power1, int life1, int speed1,
+                   int power4, int life4, int speed4,
+                   int power25, int life15, int speed25,
                    int element1, int element3) {
         this.name = name;
         this.image0 = image0;
@@ -61,10 +61,10 @@ public class Monster {
     }
 
     public Monster(String name, int image0, int image1, int image4, int image25,
-                   int power0, int power1, int power4, int power25,
-                   int life0, int life1, int life4, int life15,
-                   int speed0, int speed1, int speed4, int speed25,
-                   int stamina,
+                   int power0, int life0, int speed0, int stamina,
+                   int power1, int life1, int speed1,
+                   int power4, int life4, int speed4,
+                   int power25, int life15, int speed25,
                    int element2) {
         this.name = name;
         this.image0 = image0;
