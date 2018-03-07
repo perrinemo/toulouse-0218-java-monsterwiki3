@@ -25,6 +25,8 @@ public class MonsterActivity extends FragmentActivity {
 
         List fragments = new Vector();
 
+        /** Ajout des fragments dans le scrollview */
+
         fragments.add(Fragment.instantiate(this, MonsterLevel0.class.getName()));
         fragments.add(Fragment.instantiate(this, MonsterLevel1.class.getName()));
         fragments.add(Fragment.instantiate(this, MonsterLevel4.class.getName()));

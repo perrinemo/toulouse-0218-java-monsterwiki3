@@ -17,6 +17,28 @@ public class GridAdapter extends BaseAdapter {
     private final Context mContext;
     private final Monster[] monsters;
 
+    public static String EXTRA_AVATAR_0 = "EXTRA_AVATAR_0";
+    public static String EXTRA_AVATAR_1 = "EXTRA_AVATAR_1";
+    public static String EXTRA_AVATAR_4 = "EXTRA_AVATAR_4";
+    public static String EXTRA_AVATAR_25 = "EXTRA_AVATAR_25";
+    public static String EXTRA_ELT_1 = "EXTRA_ELT_1";
+    public static String EXTRA_ELT_2 = "EXTRA_ELT_2";
+    public static String EXTRA_ELT_3 = "EXTRA_ELT_3";
+    public static String EXTRA_MONSTER_NAME = "EXTRA_MONSTER_NAME";
+    public static String EXTRA_LIFE_0 = "EXTRA_LIFE_0";
+    public static String EXTRA_LIFE_1 = "EXTRA_LIFE_1";
+    public static String EXTRA_LIFE_4 = "EXTRA_LIFE_4";
+    public static String EXTRA_LIFE_25 = "EXTRA_LIFE_25";
+    public static String EXTRA_SPEED_0 = "EXTRA_SPEED_0";
+    public static String EXTRA_SPEED_1 = "EXTRA_SPEED_1";
+    public static String EXTRA_SPEED_4 = "EXTRA_SPEED_4";
+    public static String EXTRA_SPEED_25 = "EXTRA_SPEED_25";
+    public static String EXTRA_POWER_0 = "EXTRA_POWER_0";
+    public static String EXTRA_POWER_1 = "EXTRA_POWER_1";
+    public static String EXTRA_POWER_4 = "EXTRA_POWER_4";
+    public static String EXTRA_POWER_25 = "EXTRA_POWER_25";
+    public static String EXTRA_STAMINA = "EXTRA_STAMINA";
+
     /** Constructeur de la class GridAdapter */
 
     public GridAdapter (Context context, Monster[] monsters) {
@@ -24,7 +46,7 @@ public class GridAdapter extends BaseAdapter {
         this.monsters = monsters;
     }
 
-    /** Methode obligatoire qui sont dans la classe BaseAdapter */
+    /** Methodes de la classe BaseAdapter */
 
     @Override
     public int getCount(){
@@ -41,7 +63,7 @@ public class GridAdapter extends BaseAdapter {
         return null;
     }
 
-    /** Partie sur laquelle on agit */
+    /** Méthode qui va afficher le gridview */
 
     @Override
     public View getView (int position, View convertView, ViewGroup parent) {
@@ -52,7 +74,7 @@ public class GridAdapter extends BaseAdapter {
             convertView = layoutInflater.inflate(R.layout.grid_layout, null);
         }
 
-        /** differents éléments dans le miniature */
+        /** On récupère les id du grid_layout pour les mettre dans des variables */
 
         final ImageView gridMonsterImg = convertView.findViewById(R.id.imgLv1);
         final TextView gridMonsterName = convertView.findViewById(R.id.monster_name);
@@ -60,15 +82,11 @@ public class GridAdapter extends BaseAdapter {
         final ImageView gridElementCenter= convertView.findViewById(R.id.element_Center);
         final ImageView gridElementRight = convertView.findViewById(R.id.element_Right);
 
-        /** Appel du contructeur pour réaliser le miniature. */
 
-        gridMonsterName.setText(monster.getName());
-        gridMonsterImg.setImageResource(monster.getImage1());
-        gridElementCenter.setImageResource(monster.getElement2());
-        gridElementLeft.setImageResource(monster.getElement1());
-        gridElementRight.setImageResource(monster.getElement3());
 
-        /** On stock les données get dans une variable. */
+        /** On stocke les données du Monster construit dans des variables
+         * Et on convertit les données de type int (les stats) en type String
+         * */
 
         final String monster_name = monster.getName();
 
@@ -77,12 +95,9 @@ public class GridAdapter extends BaseAdapter {
         final int monsterImage4 = monster.getImage4();
         final int monsterImage25 = monster.getImage25();
 
-
         final int eltLeft = monster.getElement1();
         final int eltCenter = monster.getElement2();
         final int eltRight = monster.getElement3();
-
-        /** On convertit les int en string */
 
         final String life0 = String.valueOf(monster.getLife0());
         final String power0 = String.valueOf(monster.getPower0());
@@ -102,58 +117,73 @@ public class GridAdapter extends BaseAdapter {
 
         final String stamina = String.valueOf(monster.getStamina());
 
-        /** on créait le Bundle qui sert à stocker une image, car image ne se put-extra pas. */
+        /** On envoie les données du Monster construit dans le layout
+         * grâce aux getters de la classs Monster
+         * */
+
+        gridMonsterName.setText(monsterImage);
+        gridMonsterImg.setImageResource(monsterImage);
+        gridElementCenter.setImageResource(eltCenter);
+        gridElementLeft.setImageResource(eltLeft);
+        gridElementRight.setImageResource(eltRight);
+
+        /** on créait les Bundle qui vont servir à stocker les images
+         * pour pouvoir les passer dans le intent par la suite
+         * */
 
         final Bundle bundleImg0 = new Bundle();
-
         final Bundle bundleImg1 = new Bundle();
         final Bundle bundleImg4 = new Bundle();
         final Bundle bundleImg25 = new Bundle();
-        final Bundle bundle2 = new Bundle();
-        final Bundle bundle3 = new Bundle();
-        final Bundle bundle4 = new Bundle();
+        final Bundle bundleElt1 = new Bundle();
+        final Bundle bundleElt2 = new Bundle();
+        final Bundle bundleElt3 = new Bundle();
 
-        /** le set on click quand on clic sur l'image. */
+        /** On stocke les images dans les bundle */
+
+        bundleImg0.putInt(EXTRA_AVATAR_0, monsterImage);
+        bundleImg1.putInt(EXTRA_AVATAR_1, monsterImage1);
+        bundleImg4.putInt(EXTRA_AVATAR_4, monsterImage4);
+        bundleImg25.putInt(EXTRA_AVATAR_25, monsterImage25);
+        bundleElt1.putInt(EXTRA_ELT_1, eltLeft);
+        bundleElt2.putInt(EXTRA_ELT_2, eltCenter);
+        bundleElt3.putInt(EXTRA_ELT_3, eltRight);
+
 
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(mContext, MonsterActivity.class);
 
-                bundleImg0.putInt("monsterImg0", monsterImage);
-                bundleImg1.putInt("monsterImg1", monsterImage1);
-                bundleImg4.putInt("monsterImg4", monsterImage4);
-                bundleImg25.putInt("monsterImg25", monsterImage25);
-                bundle2.putInt("elt1", eltLeft);
-                bundle3.putInt("elt2", eltCenter);
-                bundle4.putInt("elt3", eltRight);
+                /** On envoie les images via putExtras
+                 * et les String via putExtra */
 
                 intent.putExtras(bundleImg0);
                 intent.putExtras(bundleImg1);
                 intent.putExtras(bundleImg4);
                 intent.putExtras(bundleImg25);
-                intent.putExtras(bundle2);
-                intent.putExtras(bundle3);
-                intent.putExtras(bundle4);
+                intent.putExtras(bundleElt1);
+                intent.putExtras(bundleElt2);
+                intent.putExtras(bundleElt3);
 
-                intent.putExtra("monsterName", monster_name);
-                intent.putExtra("monsterLife0", life0);
-                intent.putExtra("monsterPower0", power0);
-                intent.putExtra("monsterSpeed0", speed0);
+                intent.putExtra(EXTRA_MONSTER_NAME, monster_name);
+                intent.putExtra(EXTRA_LIFE_0, life0);
+                intent.putExtra(EXTRA_POWER_0, power0);
+                intent.putExtra(EXTRA_SPEED_0, speed0);
 
-                intent.putExtra("monsterLife1", life1);
-                intent.putExtra("monsterPower1", power1);
-                intent.putExtra("monsterSpeed1", speed1);
+                intent.putExtra(EXTRA_LIFE_1, life1);
+                intent.putExtra(EXTRA_POWER_1, power1);
+                intent.putExtra(EXTRA_SPEED_1, speed1);
 
-                intent.putExtra("monsterLife4", life4);
-                intent.putExtra("monsterPower4", power4);
-                intent.putExtra("monsterSpeed4", speed4);
+                intent.putExtra(EXTRA_LIFE_4, life4);
+                intent.putExtra(EXTRA_POWER_4, power4);
+                intent.putExtra(EXTRA_SPEED_4, speed4);
 
-                intent.putExtra("monsterLife25", life25);
-                intent.putExtra("monsterPower25", power25);
-                intent.putExtra("monsterSpeed25", speed25);
+                intent.putExtra(EXTRA_LIFE_25, life25);
+                intent.putExtra(EXTRA_POWER_25, power25);
+                intent.putExtra(EXTRA_SPEED_25, speed25);
 
-                intent.putExtra("monsterStamina", stamina);
+                intent.putExtra(EXTRA_STAMINA, stamina);
 
 
                 mContext.startActivity(intent);

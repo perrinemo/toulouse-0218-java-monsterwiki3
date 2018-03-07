@@ -32,6 +32,8 @@ public class Monster {
     private int element2;
     private int element3;
 
+    /** Constructeur d'un Monster qui a 2 éléments */
+
     public Monster(String name, int image0, int image1, int image4, int image25,
                    int power0, int life0, int speed0, int stamina,
                    int power1, int life1, int speed1,
@@ -59,6 +61,8 @@ public class Monster {
         this.element1 = element1;
         this.element3 = element3;
     }
+
+    /** Constructeur d'un Monster qui a 1 élément */
 
     public Monster(String name, int image0, int image1, int image4, int image25,
                    int power0, int life0, int speed0, int stamina,
