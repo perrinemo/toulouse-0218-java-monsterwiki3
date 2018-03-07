@@ -1,7 +1,9 @@
 package fr.wildcodeschool.monsterlegends;
 
+        import android.graphics.Typeface;
         import android.os.Bundle;
         import android.support.v4.app.Fragment;
+        import android.util.Log;
         import android.view.LayoutInflater;
         import android.view.View;
         import android.view.ViewGroup;
@@ -71,8 +73,20 @@ public class MonsterLevel4 extends Fragment {
         imgStamina.setImageResource(R.drawable.stamina);
         imgPower.setImageResource(R.drawable.power);
 
+        setFont(name, "GROBOLD.ttf");
 
         return view;
+    }
+
+    public void setFont(TextView textView, String fontName) {
+        if (fontName != null) {
+            try {
+                Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), "fonts/" + fontName);
+                textView.setTypeface(typeface);
+            } catch (Exception e) {
+                Log.e("FONT", fontName + " not found", e);
+            }
+        }
     }
 
 }
