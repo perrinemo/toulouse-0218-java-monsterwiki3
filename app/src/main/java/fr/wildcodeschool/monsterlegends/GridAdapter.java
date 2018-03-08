@@ -122,7 +122,7 @@ public class GridAdapter extends BaseAdapter {
          * */
 
         gridMonsterName.setText(monster_name);
-        gridMonsterImg.setImageResource(monsterImage);
+        gridMonsterImg.setImageResource(monsterImage1);
         gridElementCenter.setImageResource(eltCenter);
         gridElementLeft.setImageResource(eltLeft);
         gridElementRight.setImageResource(eltRight);

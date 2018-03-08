@@ -10,14 +10,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:src="@drawable/name"
-        android:paddingTop="20dp"/>
+        android:paddingTop="20dp"
+        android:src="@drawable/name" />
 
     <ImageView
         android:id="@+id/tyrano"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:layout_alignEnd="@+id/splashPandalf"
         android:layout_alignRight="@+id/splashPandalf"
         android:layout_alignTop="@+id/rabbishAnimnim"
