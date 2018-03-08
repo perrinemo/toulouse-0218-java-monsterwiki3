@@ -121,7 +121,7 @@ public class GridAdapter extends BaseAdapter {
          * grâce aux getters de la classs Monster
          * */
 
-        gridMonsterName.setText(monsterImage);
+        gridMonsterName.setText(monster_name);
         gridMonsterImg.setImageResource(monsterImage);
         gridElementCenter.setImageResource(eltCenter);
         gridElementLeft.setImageResource(eltLeft);
@@ -139,21 +139,23 @@ public class GridAdapter extends BaseAdapter {
         final Bundle bundleElt2 = new Bundle();
         final Bundle bundleElt3 = new Bundle();
 
-        /** On stocke les images dans les bundle */
 
-        bundleImg0.putInt(EXTRA_AVATAR_0, monsterImage);
-        bundleImg1.putInt(EXTRA_AVATAR_1, monsterImage1);
-        bundleImg4.putInt(EXTRA_AVATAR_4, monsterImage4);
-        bundleImg25.putInt(EXTRA_AVATAR_25, monsterImage25);
-        bundleElt1.putInt(EXTRA_ELT_1, eltLeft);
-        bundleElt2.putInt(EXTRA_ELT_2, eltCenter);
-        bundleElt3.putInt(EXTRA_ELT_3, eltRight);
 
 
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(mContext, MonsterActivity.class);
+
+                /** On stocke les images dans les bundle */
+
+                bundleImg0.putInt(EXTRA_AVATAR_0, monsterImage);
+                bundleImg1.putInt(EXTRA_AVATAR_1, monsterImage1);
+                bundleImg4.putInt(EXTRA_AVATAR_4, monsterImage4);
+                bundleImg25.putInt(EXTRA_AVATAR_25, monsterImage25);
+                bundleElt1.putInt(EXTRA_ELT_1, eltLeft);
+                bundleElt2.putInt(EXTRA_ELT_2, eltCenter);
+                bundleElt3.putInt(EXTRA_ELT_3, eltRight);
 
                 /** On envoie les images via putExtras
                  * et les String via putExtra */

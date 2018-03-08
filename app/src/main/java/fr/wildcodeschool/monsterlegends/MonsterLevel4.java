@@ -10,6 +10,16 @@ package fr.wildcodeschool.monsterlegends;
         import android.widget.ImageView;
         import android.widget.TextView;
 
+        import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_AVATAR_4;
+        import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_ELT_1;
+        import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_ELT_2;
+        import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_ELT_3;
+        import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_LIFE_4;
+        import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_MONSTER_NAME;
+        import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_POWER_4;
+        import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_SPEED_4;
+        import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_STAMINA;
+
 public class MonsterLevel4 extends Fragment {
 
     @Override
@@ -43,16 +53,16 @@ public class MonsterLevel4 extends Fragment {
 
         /** On récupère les images et les textes envoyés depuis GridAdapter */
 
-        int monsterAvatar = bundle1.getInt("monsterImg4");
-        int monsterElt1 = bundle2.getInt("elt1");
-        int monsterElt2 = bundle3.getInt("elt2");
-        int monsterElt3 = bundle4.getInt("elt3");
+        int monsterAvatar = bundle1.getInt(EXTRA_AVATAR_4);
+        int monsterElt1 = bundle2.getInt(EXTRA_ELT_1);
+        int monsterElt2 = bundle3.getInt(EXTRA_ELT_2);
+        int monsterElt3 = bundle4.getInt(EXTRA_ELT_3);
 
-        String monsterName = getActivity().getIntent().getStringExtra("monsterName");
-        String monsterLife = getActivity().getIntent().getStringExtra("monsterLife4");
-        String monsterSpeed = getActivity().getIntent().getStringExtra("monsterSpeed4");
-        String monsterPower = getActivity().getIntent().getStringExtra("monsterPower4");
-        String monsterStamina = getActivity().getIntent().getStringExtra("monsterStamina");
+        String monsterName = getActivity().getIntent().getStringExtra(EXTRA_MONSTER_NAME);
+        String monsterLife = getActivity().getIntent().getStringExtra(EXTRA_LIFE_4);
+        String monsterSpeed = getActivity().getIntent().getStringExtra(EXTRA_SPEED_4);
+        String monsterPower = getActivity().getIntent().getStringExtra(EXTRA_POWER_4);
+        String monsterStamina = getActivity().getIntent().getStringExtra(EXTRA_STAMINA);
 
         /** On envoie les images et les textes récupérés dans nos id du xml */
 
