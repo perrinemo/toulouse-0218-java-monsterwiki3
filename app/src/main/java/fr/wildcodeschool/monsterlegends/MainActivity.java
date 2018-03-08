@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     /** Création et remplissage du tableau de Monster */
 
     private Monster[] monsters = {
-            new Monster("Arch Knight", R.drawable.archknight0, R.drawable.archknight1, R.drawable.archknight2, R.drawable.archknight3, 200, 56, 200, 140, 308, 127, 308, 392, 162, 392, 980, 1587, 980, R.drawable.dark, R.drawable.magic),
+            new Monster("Arch Knight", R.drawable.archknight0, R.drawable.archknight1, R.drawable.archknight2, R.drawable.archknight3, 200, 56, 200, 140, 308, 127, 308, 392, 162, 392, 980, 1587, 980, R.drawable.legend, R.drawable.light),
             new Monster("Bonbon", R.drawable.bonbon0, R.drawable.bonbon1, R.drawable.bonbon2, R.drawable.bonbon3, 175, 63, 200, 120, 231, 123, 264, 294, 158, 336, 735, 1546, 840, R.drawable.thunder, R.drawable.earth),
             new Monster("Electrex", R.drawable.electrex0,R.drawable.electrex1,R.drawable.electrex2,R.drawable.electrex3,170,63,225,110,205,112,272,261,143,347,654,1404,868,R.drawable.earth,R.drawable.thunder),
             new Monster("Fire Lion", R.drawable.firelion0, R.drawable.firelion1, R.drawable.firelion2, R.drawable.firelion3, 220, 50, 175, 100, 242, 81, 192,308, 104, 244, 770, 1017,612,  R.drawable.fire),
