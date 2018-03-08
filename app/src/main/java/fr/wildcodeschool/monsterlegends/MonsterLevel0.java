@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_AVATAR_0;
 import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_ELT_1;
@@ -35,7 +36,7 @@ public class MonsterLevel0 extends Fragment {
         TextView speed = view.findViewById(R.id.textSpeed);
         TextView stamina = view.findViewById(R.id.textStamina);
         ImageView avatar = view.findViewById(R.id.monsterAvatar);
-        ImageView eltLeft = view.findViewById(R.id.elementLeft);
+        final ImageView eltLeft = view.findViewById(R.id.elementLeft);
         ImageView eltCenter = view.findViewById(R.id.elementCenter);
         ImageView eltRigth = view.findViewById(R.id.elementRight);
 

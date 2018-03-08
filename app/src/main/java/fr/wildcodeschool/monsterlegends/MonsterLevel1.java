@@ -14,6 +14,7 @@ import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_AVATAR_1;
 import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_ELT_1;
 import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_ELT_2;
 import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_ELT_3;
+import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_LIFE_0;
 import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_LIFE_1;
 import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_MONSTER_NAME;
 import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_POWER_1;
@@ -63,6 +64,7 @@ public class MonsterLevel1 extends Fragment {
         String monsterSpeed = getActivity().getIntent().getStringExtra(EXTRA_SPEED_1);
         String monsterPower = getActivity().getIntent().getStringExtra(EXTRA_POWER_1);
         String monsterStamina = getActivity().getIntent().getStringExtra(EXTRA_STAMINA);
+
 
         /** On envoie les images et les textes récupérés dans nos id du xml */
 

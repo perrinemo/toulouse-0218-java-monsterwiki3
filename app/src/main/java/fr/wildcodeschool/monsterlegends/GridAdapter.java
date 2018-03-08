@@ -99,21 +99,25 @@ public class GridAdapter extends BaseAdapter {
         final int eltCenter = monster.getElement2();
         final int eltRight = monster.getElement3();
 
+
+
         final String life0 = String.valueOf(monster.getLife0());
+
+
         final String power0 = String.valueOf(monster.getPower0());
         final String speed0 = String.valueOf(monster.getSpeed0());
 
-        final String life1 = String.valueOf(monster.getLife1());
-        final String power1 = String.valueOf(monster.getPower1());
-        final String speed1 = String.valueOf(monster.getSpeed1());
+        final String life1 = String.valueOf(monster.getLife0() * 2 - 17);
+        final String power1 = String.valueOf(monster.getPower0() * 2 + 35);
+        final String speed1 = String.valueOf(monster.getSpeed0() * 2 + 5);
 
-        final String life4 = String.valueOf(monster.getLife4());
-        final String power4 = String.valueOf(monster.getPower4());
-        final String speed4 = String.valueOf(monster.getSpeed4());
+        final String life4 = String.valueOf(monster.getLife0() * 2 + 57);
+        final String power4 = String.valueOf(monster.getPower0() * 3 - 42);
+        final String speed4 = String.valueOf(monster.getSpeed0() * 2 + 62);
 
-        final String life25 = String.valueOf(monster.getLife25());
-        final String power25 = String.valueOf(monster.getPower25());
-        final String speed25 = String.valueOf(monster.getSpeed25());
+        final String life25 = String.valueOf(monster.getLife0() * 18 + 42);
+        final String power25 = String.valueOf(monster.getPower0() * 9 + 28);
+        final String speed25 = String.valueOf(monster.getSpeed0() * 8 - 3);
 
         final String stamina = String.valueOf(monster.getStamina());
 
@@ -191,7 +195,12 @@ public class GridAdapter extends BaseAdapter {
                 mContext.startActivity(intent);
             }
         });
+
+
         return convertView;
+
+
     }
+
 
 }
