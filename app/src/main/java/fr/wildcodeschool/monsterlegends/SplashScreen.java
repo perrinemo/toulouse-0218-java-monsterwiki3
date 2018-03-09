@@ -13,7 +13,7 @@ import android.widget.ImageView;
  */
 
 public class SplashScreen extends Activity {
-    private final int SPLASH_TIME_OUT = 5000;
+    private final int SPLASH_TIME_OUT = 3500;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -25,7 +25,7 @@ public class SplashScreen extends Activity {
         pandalf.startAnimation(animation);
 
         ImageView name = findViewById(R.id.wikiName);
-        Animation animation2 = AnimationUtils.loadAnimation((getApplicationContext()),R.anim.fade2);
+        Animation animation2 = AnimationUtils.loadAnimation((getApplicationContext()),R.anim.fade3);
         name.startAnimation(animation2);
 
         ImageView monsterFond = findViewById(R.id.rabbishAnimnim);
