@@ -1,6 +1,9 @@
 package fr.wildcodeschool.monsterlegends;
 
-public class Monster {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Monster implements Parcelable {
 
     /** Un monstre est définit par son nom, son image,
      * ses stats (life, power, stamina, speed)
@@ -57,6 +60,54 @@ public class Monster {
         this.speed0 = speed0;
         this.element2 = element2;
     }
+
+    protected Monster(Parcel in) {
+        name = in.readString();
+        image0 = in.readInt();
+        image1 = in.readInt();
+        image4 = in.readInt();
+        image25 = in.readInt();
+        life0 = in.readInt();
+        power0 = in.readInt();
+        stamina = in.readInt();
+        speed0 = in.readInt();
+        element1 = in.readInt();
+        element2 = in.readInt();
+        element3 = in.readInt();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(name);
+        dest.writeInt(image0);
+        dest.writeInt(image1);
+        dest.writeInt(image4);
+        dest.writeInt(image25);
+        dest.writeInt(life0);
+        dest.writeInt(power0);
+        dest.writeInt(stamina);
+        dest.writeInt(speed0);
+        dest.writeInt(element1);
+        dest.writeInt(element2);
+        dest.writeInt(element3);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<Monster> CREATOR = new Creator<Monster>() {
+        @Override
+        public Monster createFromParcel(Parcel in) {
+            return new Monster(in);
+        }
+
+        @Override
+        public Monster[] newArray(int size) {
+            return new Monster[size];
+        }
+    };
 
     public String getName() {
         return name;

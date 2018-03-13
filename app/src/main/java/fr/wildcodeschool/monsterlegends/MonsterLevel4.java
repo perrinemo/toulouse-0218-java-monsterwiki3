@@ -10,21 +10,17 @@ package fr.wildcodeschool.monsterlegends;
         import android.widget.ImageView;
         import android.widget.TextView;
 
-        import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_AVATAR_4;
-        import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_ELT_1;
-        import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_ELT_2;
-        import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_ELT_3;
-        import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_LIFE_4;
-        import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_MONSTER_NAME;
-        import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_POWER_4;
-        import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_SPEED_4;
-        import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_STAMINA;
+        import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_MONSTER;
+        import static fr.wildcodeschool.monsterlegends.GridAdapter.EXTRA_MONSTER_2;
 
 public class MonsterLevel4 extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.monster_page, container, false);
+
+        Monster monster = getActivity().getIntent().getExtras().getParcelable(EXTRA_MONSTER);
+        Monster monster2 = getActivity().getIntent().getExtras().getParcelable(EXTRA_MONSTER_2);
 
         /** Récupère les id du xml */
         TextView name = view.findViewById(R.id.monsterName);
@@ -36,52 +32,28 @@ public class MonsterLevel4 extends Fragment {
         ImageView avatar = view.findViewById(R.id.monsterAvatar);
         ImageView eltLeft = view.findViewById(R.id.elementLeft);
         ImageView eltCenter = view.findViewById(R.id.elementCenter);
-        ImageView eltRigth = view.findViewById(R.id.elementRight);
+        ImageView eltRight = view.findViewById(R.id.elementRight);
 
         ImageView imgLife = view.findViewById(R.id.imgLife);
         ImageView imgSpeed = view.findViewById(R.id.imgSpeed);
         ImageView imgStamina = view.findViewById(R.id.imgStamina);
         ImageView imgPower = view.findViewById(R.id.imgForce);
 
-
-        /** On créait les bundle qui contiennent les images à venir */
-
-        Bundle bundle1 = this.getActivity().getIntent().getExtras();
-        Bundle bundle2 = this.getActivity().getIntent().getExtras();
-        Bundle bundle3 = this.getActivity().getIntent().getExtras();
-        Bundle bundle4 = this.getActivity().getIntent().getExtras();
-
-        /** On récupère les images et les textes envoyés depuis GridAdapter */
-
-        int monsterAvatar = bundle1.getInt(EXTRA_AVATAR_4);
-        int monsterElt1 = bundle2.getInt(EXTRA_ELT_1);
-        int monsterElt2 = bundle3.getInt(EXTRA_ELT_2);
-        int monsterElt3 = bundle4.getInt(EXTRA_ELT_3);
-
-        String monsterName = getActivity().getIntent().getStringExtra(EXTRA_MONSTER_NAME);
-        String monsterLife = getActivity().getIntent().getStringExtra(EXTRA_LIFE_4);
-        String monsterSpeed = getActivity().getIntent().getStringExtra(EXTRA_SPEED_4);
-        String monsterPower = getActivity().getIntent().getStringExtra(EXTRA_POWER_4);
-        String monsterStamina = getActivity().getIntent().getStringExtra(EXTRA_STAMINA);
-
-        /** On envoie les images et les textes récupérés dans nos id du xml */
-
-        name.setText(monsterName);
-        lvl.setText(R.string.level4);
-        life.setText(monsterLife);
-        power.setText(monsterPower);
-        speed.setText(monsterSpeed);
-        stamina.setText(monsterStamina);
-
-        avatar.setImageResource(monsterAvatar);
-        eltLeft.setImageResource(monsterElt1);
-        eltCenter.setImageResource(monsterElt2);
-        eltRigth.setImageResource(monsterElt3);
-
         imgLife.setImageResource(R.drawable.life);
         imgSpeed.setImageResource(R.drawable.speed);
         imgStamina.setImageResource(R.drawable.stamina);
         imgPower.setImageResource(R.drawable.power);
+
+        name.setText(monster.getName());
+        lvl.setText(R.string.level4);
+        life.setText(String.valueOf(monster.getLife0() * 2 + 57));
+        speed.setText(String.valueOf(monster.getSpeed0() * 3 - 42));
+        power.setText(String.valueOf(monster.getPower0() * 2 + 62));
+        stamina.setText(String.valueOf(monster.getStamina()));
+        eltLeft.setImageResource(monster.getElement1());
+        eltCenter.setImageResource(monster2.getElement2());
+        eltRight.setImageResource(monster.getElement3());
+        avatar.setImageResource(monster.getImage4());
 
         setFont(name, "GROBOLD.ttf");
 
