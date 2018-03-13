@@ -8,10 +8,10 @@
     <ImageView
         android:id="@+id/wikiName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:layout_alignParentTop="true"
         android:paddingTop="20dp"
-        android:src="@drawable/name" />
+        android:src="@drawable/mlw_header" />
 
     <ImageView
         android:id="@+id/tyrano"
