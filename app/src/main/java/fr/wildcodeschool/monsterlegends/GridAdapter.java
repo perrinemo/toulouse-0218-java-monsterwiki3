@@ -6,46 +6,54 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class GridAdapter extends BaseAdapter {
+import java.util.ArrayList;
+
+public class GridAdapter extends BaseAdapter implements Filterable {
 
     private final Context mContext;
-    private final Monster[] monsters;
+    public ArrayList<Monster> monsters;
+
+    private ArrayList<Monster> filterList;
+    private CustomFilter filter;
 
     public static String EXTRA_MONSTER = "EXTRA_MONSTER";
     public static String EXTRA_MONSTER_2 = "EXTRA_MONSTER_2";
 
     /** Constructeur de la class GridAdapter */
 
-    public GridAdapter (Context context, Monster[] monsters) {
+    public GridAdapter (Context context, ArrayList<Monster> monsters) {
         this.mContext = context;
         this.monsters = monsters;
+        this.filterList = monsters;
     }
 
     /** Methodes de la classe BaseAdapter */
 
     @Override
     public int getCount(){
-        return monsters.length;
+        return monsters.size();
     }
 
     @Override
     public long getItemId (int position) {
-        return 0;
+        return position;
     }
 
     @Override
     public Object getItem (int position) {
-        return null;
+        return monsters.get(position);
     }
 
     /** Méthode qui va afficher le gridview */
 
     @Override
     public View getView (int position, View convertView, ViewGroup parent) {
-        final Monster monster = monsters[position];
+        final Monster monster = monsters.get(position);
 
         if (convertView == null) {
             final LayoutInflater layoutInflater = LayoutInflater.from(mContext);
@@ -114,9 +122,13 @@ public class GridAdapter extends BaseAdapter {
 
 
         return convertView;
-
-
     }
 
-
+    @Override
+    public Filter getFilter() {
+        if (filter == null) {
+            filter = new CustomFilter(filterList, this);
+        }
+        return filter;
+    }
 }
