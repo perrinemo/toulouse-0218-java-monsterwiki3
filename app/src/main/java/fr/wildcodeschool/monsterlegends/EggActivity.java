@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-public class Egg extends AppCompatActivity {
+public class EggActivity extends AppCompatActivity {
 
     int score = 0;
 
