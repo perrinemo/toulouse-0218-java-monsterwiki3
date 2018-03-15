@@ -1,7 +1,9 @@
 package fr.wildcodeschool.monsterlegends;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.GridView;
 import android.support.v7.widget.SearchView;
 
@@ -85,5 +87,10 @@ public class MainActivity extends AppCompatActivity {
                         175, 100, R.drawable.dark));
 
         return monsters;
+    }
+
+    public void egg(View view) {
+        Intent egg = new Intent(MainActivity.this, Egg.class);
+        startActivity(egg);
     }
 }
