@@ -17,18 +17,20 @@
         android:layout_marginTop="10dp"
         />
 
-    <Button
-        android:id="@+id/egg"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@drawable/rabbish2"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        />
-
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/habitat" />
+        android:src="@drawable/habitat"
+        />
+
+    <ImageButton
+        android:id="@+id/egg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:backgroundTint="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/rabbish2" />
 
 </RelativeLayout>
