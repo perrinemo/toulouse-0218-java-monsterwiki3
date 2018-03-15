@@ -4,10 +4,6 @@ import android.widget.Filter;
 
 import java.util.ArrayList;
 
-/**
- * Created by perrine on 14/03/18.
- */
-
 public class CustomFilter extends Filter {
     private ArrayList<Monster> filterList;
     private GridAdapter adapter;
@@ -16,6 +12,10 @@ public class CustomFilter extends Filter {
         this.filterList = filterList;
         this.adapter = adapter;
     }
+
+    /** Création de la searchview qui va nous permettre de chercher un monstre par son nom
+     * La searchview créait une nouvelle liste de monstres en les filtrant
+     */
 
     @Override
     protected FilterResults performFiltering(CharSequence constraint) {

@@ -20,19 +20,19 @@ public class SplashScreen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        ImageView pandalf = findViewById(R.id.splashPandalf);
+        ImageView pandalf = findViewById(R.id.splash_pandalf);
         Animation animation = AnimationUtils.loadAnimation((getApplicationContext()),R.anim.fade3);
         pandalf.startAnimation(animation);
 
-        ImageView name = findViewById(R.id.wikiName);
+        ImageView name = findViewById(R.id.wiki_name);
         Animation animation2 = AnimationUtils.loadAnimation((getApplicationContext()),R.anim.fade3);
         name.startAnimation(animation2);
 
-        ImageView monsterFond = findViewById(R.id.rabbishAnimnim);
+        ImageView monsterFond = findViewById(R.id.splash_rabish);
         Animation animation3 = AnimationUtils.loadAnimation((getApplicationContext()),R.anim.fade);
         monsterFond.startAnimation(animation3);
 
-        ImageView monsterFond2 = findViewById(R.id.tyrano);
+        ImageView monsterFond2 = findViewById(R.id.splash_tyrano);
         Animation animation4 = AnimationUtils.loadAnimation((getApplicationContext()),R.anim.fade);
         monsterFond2.startAnimation(animation4);
 

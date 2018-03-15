@@ -45,6 +45,8 @@ public class MonsterLevel0 extends Fragment {
         imgStamina.setImageResource(R.drawable.stamina);
         imgPower.setImageResource(R.drawable.power);
 
+        /** On envoie les données vers les éléments grâce à leurs getters */
+
         name.setText(monster.getName());
         lvl.setText(R.string.level0);
         life.setText(String.valueOf(monster.getLife0()));
@@ -60,6 +62,8 @@ public class MonsterLevel0 extends Fragment {
 
         return view;
     }
+
+    /** Méthode qui permet de changer les polices d'écritures */
 
     public void setFont(TextView textView, String fontName) {
         if (fontName != null) {

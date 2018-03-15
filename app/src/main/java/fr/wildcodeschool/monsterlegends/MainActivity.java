@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
         final GridAdapter gridAdapter = new GridAdapter(this, getMonsters());
         gridView.setAdapter(gridAdapter);
 
+        /** Initialisation de la searchview */
+
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
@@ -35,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /** Création et remplissage du tableau de Monster */
+    /** Création et remplissage d'une liste de Monster */
 
     private ArrayList<Monster> getMonsters() {
         ArrayList<Monster> monsters = new ArrayList<>();

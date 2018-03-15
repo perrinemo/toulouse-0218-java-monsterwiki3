@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/wikiName"
+        android:id="@+id/wiki_name"
         android:layout_width="match_parent"
         android:layout_height="130dp"
         android:layout_alignParentTop="true"
@@ -14,25 +14,25 @@
         android:src="@drawable/mlw_header" />
 
     <ImageView
-        android:id="@+id/tyrano"
+        android:id="@+id/splash_tyrano"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_alignEnd="@+id/splashPandalf"
-        android:layout_alignRight="@+id/splashPandalf"
-        android:layout_alignTop="@+id/rabbishAnimnim"
+        android:layout_alignEnd="@+id/splash_pandalf"
+        android:layout_alignRight="@+id/splash_pandalf"
+        android:layout_alignTop="@+id/splash_rabish"
         android:layout_marginEnd="109dp"
         android:layout_marginRight="109dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="11dp"
         android:scaleX="-1"
         android:src="@drawable/tyrannoking2" />
 
     <ImageView
-        android:id="@+id/rabbishAnimnim"
+        android:id="@+id/splash_rabish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/splashPandalf"
-        android:layout_alignStart="@+id/splashPandalf"
+        android:layout_alignLeft="@+id/splash_pandalf"
+        android:layout_alignStart="@+id/splash_pandalf"
         android:layout_centerVertical="true"
         android:layout_marginLeft="105dp"
         android:layout_marginStart="105dp"
@@ -41,10 +41,9 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/splashPandalf"
+        android:id="@+id/splash_pandalf"
         android:src="@drawable/pandalf"
         android:layout_centerInParent="true"/>
-
 
 
 </RelativeLayout>
