@@ -15,44 +15,52 @@ import java.util.ArrayList;
 
 public class GridAdapter extends BaseAdapter implements Filterable {
 
+    public static String EXTRA_MONSTER = "EXTRA_MONSTER";
+    public static String EXTRA_MONSTER_2 = "EXTRA_MONSTER_2";
     private final Context mContext;
-    public ArrayList<Monster> monsters;
-
+    private ArrayList<Monster> monsters;
     private ArrayList<Monster> filterList;
     private CustomFilter filter;
 
-    public static String EXTRA_MONSTER = "EXTRA_MONSTER";
-    public static String EXTRA_MONSTER_2 = "EXTRA_MONSTER_2";
+    /**
+     * Constructeur de la class GridAdapter
+     */
 
-    /** Constructeur de la class GridAdapter */
-
-    public GridAdapter (Context context, ArrayList<Monster> monsters) {
+    public GridAdapter(Context context, ArrayList<Monster> monsters) {
         this.mContext = context;
         this.monsters = monsters;
         this.filterList = monsters;
     }
 
-    /** Methodes de la classe BaseAdapter */
+    public void setMonsters(ArrayList<Monster> monsters) {
+        this.monsters = monsters;
+    }
+
+    /**
+     * Methodes de la classe BaseAdapter
+     */
 
     @Override
-    public int getCount(){
+    public int getCount() {
         return monsters.size();
     }
 
     @Override
-    public long getItemId (int position) {
+    public long getItemId(int position) {
         return position;
     }
 
     @Override
-    public Object getItem (int position) {
+    public Object getItem(int position) {
         return monsters.get(position);
     }
 
-    /** Méthode qui va afficher le gridview */
+    /**
+     * Méthode qui va afficher le gridview
+     */
 
     @Override
-    public View getView (int position, View convertView, ViewGroup parent) {
+    public View getView(int position, View convertView, ViewGroup parent) {
         final Monster monster = monsters.get(position);
 
         if (convertView == null) {
@@ -62,11 +70,11 @@ public class GridAdapter extends BaseAdapter implements Filterable {
 
         /** On récupère les id du grid_layout pour les mettre dans des variables */
 
-        final ImageView gridMonsterImg = convertView.findViewById(R.id.imgLv1);
+        final ImageView gridMonsterImg = convertView.findViewById(R.id.img_lv1);
         final TextView gridMonsterName = convertView.findViewById(R.id.monster_name);
-        final ImageView gridElementLeft = convertView.findViewById(R.id.element_Left);
-        final ImageView gridElementCenter= convertView.findViewById(R.id.element_Center);
-        final ImageView gridElementRight = convertView.findViewById(R.id.element_Right);
+        final ImageView gridElementLeft = convertView.findViewById(R.id.element_left);
+        final ImageView gridElementCenter = convertView.findViewById(R.id.element_center);
+        final ImageView gridElementRight = convertView.findViewById(R.id.element_right);
 
         /** On stocke les données du Monster construit dans des variables
          * Et on convertit les données de type int (les stats) en type String

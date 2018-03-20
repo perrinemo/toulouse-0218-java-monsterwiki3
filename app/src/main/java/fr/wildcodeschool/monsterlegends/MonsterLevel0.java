@@ -1,9 +1,7 @@
 package fr.wildcodeschool.monsterlegends;
 
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,23 +20,22 @@ public class MonsterLevel0 extends Fragment {
         Monster monster = getActivity().getIntent().getExtras().getParcelable(EXTRA_MONSTER);
         Monster monster2 = getActivity().getIntent().getExtras().getParcelable(EXTRA_MONSTER_2);
 
-
         /** Récupère les id du xml */
-        TextView name = view.findViewById(R.id.monsterName);
+        TextView name = view.findViewById(R.id.monster_name);
         TextView lvl = view.findViewById(R.id.level);
-        TextView life = view.findViewById(R.id.textLife);
-        TextView power = view.findViewById(R.id.textForce);
-        TextView speed = view.findViewById(R.id.textSpeed);
-        TextView stamina = view.findViewById(R.id.textStamina);
-        ImageView avatar = view.findViewById(R.id.monsterAvatar);
-        final ImageView eltLeft = view.findViewById(R.id.elementLeft);
-        ImageView eltCenter = view.findViewById(R.id.elementCenter);
-        ImageView eltRight = view.findViewById(R.id.elementRight);
+        TextView life = view.findViewById(R.id.text_life);
+        TextView power = view.findViewById(R.id.text_force);
+        TextView speed = view.findViewById(R.id.text_speed);
+        TextView stamina = view.findViewById(R.id.text_stamina);
+        ImageView avatar = view.findViewById(R.id.monster_avatar);
+        final ImageView eltLeft = view.findViewById(R.id.element_left);
+        ImageView eltCenter = view.findViewById(R.id.element_center);
+        ImageView eltRight = view.findViewById(R.id.element_right);
 
-        ImageView imgLife = view.findViewById(R.id.imgLife);
-        ImageView imgSpeed = view.findViewById(R.id.imgSpeed);
-        ImageView imgStamina = view.findViewById(R.id.imgStamina);
-        ImageView imgPower = view.findViewById(R.id.imgForce);
+        ImageView imgLife = view.findViewById(R.id.img_life);
+        ImageView imgSpeed = view.findViewById(R.id.img_speed);
+        ImageView imgStamina = view.findViewById(R.id.img_stamina);
+        ImageView imgPower = view.findViewById(R.id.img_force);
 
         imgLife.setImageResource(R.drawable.life);
         imgSpeed.setImageResource(R.drawable.speed);
@@ -58,21 +55,8 @@ public class MonsterLevel0 extends Fragment {
         eltRight.setImageResource(monster.getElement3());
         avatar.setImageResource(monster.getImage0());
 
-        setFont(name, "GROBOLD.ttf");
+        Helper.setFont(name, "GROBOLD.ttf");
 
         return view;
-    }
-
-    /** Méthode qui permet de changer les polices d'écritures */
-
-    public void setFont(TextView textView, String fontName) {
-        if (fontName != null) {
-            try {
-                Typeface typeface = Typeface.createFromAsset(getContext().getAssets(), "fonts/" + fontName);
-                textView.setTypeface(typeface);
-            } catch (Exception e) {
-                Log.e("FONT", fontName + " not found", e);
-            }
-        }
     }
 }

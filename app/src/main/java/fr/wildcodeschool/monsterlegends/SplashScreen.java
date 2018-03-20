@@ -20,28 +20,27 @@ public class SplashScreen extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        ImageView pandalf = findViewById(R.id.splash_pandalf);
-        Animation animation = AnimationUtils.loadAnimation((getApplicationContext()),R.anim.fade3);
-        pandalf.startAnimation(animation);
+        ImageView ivPandalf = findViewById(R.id.splash_pandalf);
+        Animation animation = AnimationUtils.loadAnimation((getApplicationContext()), R.anim.fade3);
+        ivPandalf.startAnimation(animation);
 
-        ImageView name = findViewById(R.id.wiki_name);
-        Animation animation2 = AnimationUtils.loadAnimation((getApplicationContext()),R.anim.fade3);
-        name.startAnimation(animation2);
+        ImageView ivName = findViewById(R.id.wiki_name);
+        Animation animation2 = AnimationUtils.loadAnimation((getApplicationContext()), R.anim.fade3);
+        ivName.startAnimation(animation2);
 
-        ImageView monsterFond = findViewById(R.id.splash_rabish);
-        Animation animation3 = AnimationUtils.loadAnimation((getApplicationContext()),R.anim.fade);
-        monsterFond.startAnimation(animation3);
+        ImageView ivMonsterBackground = findViewById(R.id.splash_rabish);
+        Animation animation3 = AnimationUtils.loadAnimation((getApplicationContext()), R.anim.fade);
+        ivMonsterBackground.startAnimation(animation3);
 
-        ImageView monsterFond2 = findViewById(R.id.splash_tyrano);
-        Animation animation4 = AnimationUtils.loadAnimation((getApplicationContext()),R.anim.fade);
-        monsterFond2.startAnimation(animation4);
+        ImageView ivMonsterBackground2 = findViewById(R.id.splash_tyrano);
+        Animation animation4 = AnimationUtils.loadAnimation((getApplicationContext()), R.anim.fade);
+        ivMonsterBackground2.startAnimation(animation4);
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 Intent intent = new Intent(SplashScreen.this, MainActivity.class);
                 SplashScreen.this.startActivity(intent);
-                SplashScreen.this.finish();
             }
         }, SPLASH_TIME_OUT);
     }

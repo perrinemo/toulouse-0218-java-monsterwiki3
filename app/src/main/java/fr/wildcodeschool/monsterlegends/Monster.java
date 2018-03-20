@@ -5,7 +5,19 @@ import android.os.Parcelable;
 
 public class Monster implements Parcelable {
 
-    /** Un monstre est définit par son nom, son image,
+    public static final Creator<Monster> CREATOR = new Creator<Monster>() {
+        @Override
+        public Monster createFromParcel(Parcel in) {
+            return new Monster(in);
+        }
+
+        @Override
+        public Monster[] newArray(int size) {
+            return new Monster[size];
+        }
+    };
+    /**
+     * Un monstre est définit par son nom, son image,
      * ses stats (life, power, stamina, speed)
      */
     private String name;
@@ -13,20 +25,17 @@ public class Monster implements Parcelable {
     private int image1;
     private int image4;
     private int image25;
-
     private int life0;
-
     private int power0;
-
     private int stamina;
-
     private int speed0;
-
     private int element1;
     private int element2;
     private int element3;
 
-    /** Constructeur d'un Monster qui a 2 éléments */
+    /**
+     * Constructeur d'un Monster qui a 2 éléments
+     */
 
     public Monster(String name, int image0, int image1, int image4, int image25,
                    int power0, int life0, int speed0, int stamina,
@@ -44,7 +53,9 @@ public class Monster implements Parcelable {
         this.element3 = element3;
     }
 
-    /** Constructeur d'un Monster qui a 1 élément */
+    /**
+     * Constructeur d'un Monster qui a 1 élément
+     */
 
     public Monster(String name, int image0, int image1, int image4, int image25,
                    int power0, int life0, int speed0, int stamina,
@@ -97,23 +108,13 @@ public class Monster implements Parcelable {
         return 0;
     }
 
-    public static final Creator<Monster> CREATOR = new Creator<Monster>() {
-        @Override
-        public Monster createFromParcel(Parcel in) {
-            return new Monster(in);
-        }
-
-        @Override
-        public Monster[] newArray(int size) {
-            return new Monster[size];
-        }
-    };
-
     public String getName() {
         return name;
     }
 
-    /** Getters Avatar */
+    /**
+     * Getters Avatar
+     */
 
     public int getImage0() {
         return image0;
@@ -131,7 +132,9 @@ public class Monster implements Parcelable {
         return image25;
     }
 
-    /** Getters Elements */
+    /**
+     * Getters Elements
+     */
 
     public int getElement1() {
         return element1;
@@ -145,7 +148,9 @@ public class Monster implements Parcelable {
         return element3;
     }
 
-    /** Getters stats */
+    /**
+     * Getters stats
+     */
 
     public int getLife0() {
         return life0;

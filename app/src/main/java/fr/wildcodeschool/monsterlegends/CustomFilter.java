@@ -13,7 +13,8 @@ public class CustomFilter extends Filter {
         this.adapter = adapter;
     }
 
-    /** Création de la searchview qui va nous permettre de chercher un monstre par son nom
+    /**
+     * Création de la searchview qui va nous permettre de chercher un monstre par son nom
      * La searchview créait une nouvelle liste de monstres en les filtrant
      */
 
@@ -42,7 +43,7 @@ public class CustomFilter extends Filter {
 
     @Override
     protected void publishResults(CharSequence constraint, FilterResults results) {
-        adapter.monsters = (ArrayList<Monster>) results.values;
+        adapter.setMonsters((ArrayList<Monster>) results.values);
         adapter.notifyDataSetChanged();
     }
 }

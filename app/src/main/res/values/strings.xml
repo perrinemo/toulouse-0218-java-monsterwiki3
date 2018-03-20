@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">Monster Legends</string>
-    <string name="monsterName">Nom du monstre</string>
+    <string name="monster_name">Nom du monstre</string>
     <string name="level1">Child lvl.1</string>
     <string name="level4">Juvenile lvl.4</string>
     <string name="level25">Adult lvl.25</string>
-    <string name="textLife">123</string>
-    <string name="textSpeed">123</string>
-    <string name="textStamina">123</string>
-    <string name="textForce">123</string>
+    <string name="text_life">123</string>
+    <string name="text_speed">123</string>
+    <string name="text_stamina">123</string>
+    <string name="text_force">123</string>
     <string name="level0">Egg lvl.0</string>
 </resources>
